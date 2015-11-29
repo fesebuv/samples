@@ -1,0 +1,24 @@
+{
+  "name": "samples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fesebuv/samples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fesebuv/samples/issues"
+  },
+  "homepage": "https://github.com/fesebuv/samples",
+  "devDependencies": {
+    "live-server": "^0.8.2"
+  }
+}
