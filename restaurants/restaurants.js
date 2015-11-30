@@ -43,11 +43,21 @@ var locations = (function () {
                 markup = '',
                 myLatlng;
 
-            label = data[i].name || ''.concat(obj.latitude, ' - ', obj.longitude);
-            markup = '<h3>' + label + '</h3>' + '<img src="' + img + '"/>';
 
-            console.info('label %s', label);
-            console.info('latitude: %s | longitude: %s ', obj.latitude, obj.longitude);
+
+            label = data[i].name || ''.concat(obj.latitude, ' - ', obj.longitude);
+            markup =    '<h3>' + 
+                            '<a target="_blank" href="'+data[i].reserve_url+'">' + 
+                                label + 
+                            '</a>'+
+                        '</h3>' + 
+                        '<a target="_blank" href="'+data[i].reserve_url+'">' + 
+                            '<img src="' + img + '"/>'
+                        '</a>';
+
+            // console.info('label %s', label);
+            // console.info('latitude: %s  | longitude: %s ', obj.latitude, obj.longitude);
+            console.info('reserve_url: %s', data[i].reserve_url);
 
             myLatlng = new google.maps.LatLng(obj.latitude, obj.longitude);
             markers[i] = new google.maps.Marker({
@@ -95,6 +105,7 @@ var locations = (function () {
             // json[i].location || '';
             obj.image = json[i].image_url || '';
             obj.name = json[i].name;
+            obj.reserve_url = json[i].reserve_url;
 
             locData.push(obj);
 
